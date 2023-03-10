@@ -2,13 +2,11 @@
 Convert Google Sheet to Property list
 
 ## Source Format (Google Sheet)
-| intValue:Int | stringValue:String | series:Product | powerSources:[PowerSource] | useEventStatck:Bool |
-| ------------ | ------------------ | -------------- | -------------------------- | ------------------- |
-| 2            | ot-talk-v1         | otTalkV1       | 電池                         | TRUE                |
-| 3            | ot-talk-v2         | ot-talk-v1     | 電池                         | FALSE               |
-| 9            | ot-talk-plus       | ot-talk-v1     | 電池                         | FALSE               |
-| 10           | ot-controller      | ot-controller  | 變壓器                        | TRUE                |
-| 12           | ot-pad             | ot-pad         | 變壓器                        | FALSE               |
+ Outer pipes  Cell padding 
+| festival:String | day:[Int] | honor:String | offering:String |
+| --------------- | --------- | ------------ | --------------- |
+| 初一、十五           | 1,15      | 廟神,家神        | 神明金             |
+| 初二、十六           | 2,16      | 土地公          | 土地公金            |
 				
 ## Result Format (Property list)
 ![](plist.png)
