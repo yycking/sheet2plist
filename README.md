@@ -11,3 +11,4 @@ Convert Google Sheet to Property list
 | 12           | ot-pad             | ot-pad         | 變壓器                        | FALSE               |
 				
 ## Result Format (Property list)
+![](plist.png)
