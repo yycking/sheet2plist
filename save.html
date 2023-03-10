@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+</head>
+
+<body onload="document.getElementById('dwn-btn').click()">
+  <textarea id="text-val" rows="10" style="display:none;"><?= content ?></textarea>
+  <input type="button" id="dwn-btn" value="Download text file" style="display:none;"/>
+</body>
+<script>
+  window.close = function(){
+    window.setTimeout(function(){google.script.host.close()},100)
+  }
+  function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+  }
+  document.getElementById("dwn-btn").addEventListener("click", function(){
+      var text = document.getElementById("text-val").value;
+      var filename = "<?= name ?>";
+      download(filename, text);
+      close();
+  }, false);
+</script>
+
+</html>
